@@ -13,6 +13,8 @@ class MasterAset extends CI_Controller
     {
         $data['judul'] = 'Halaman Data Barang';
         $data['aset'] = $this->M_masteraset->lihat();
+        $data['user'] = $this->db->get_where('user', ['email' =>
+        $this->session->userdata('email')])->row_array();
 
         $this->load->view('layout/header', $data);
         $this->load->view('layout/topbar');

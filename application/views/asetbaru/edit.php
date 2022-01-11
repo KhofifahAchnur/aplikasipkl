@@ -70,8 +70,7 @@
                                     <select name="kondisi" class="form-control" id="kondisi">
                                         <option value="<?= $barang['kondisi']; ?>"><?= $barang['kondisi']; ?></option>
                                         <option value="Baik"> Baik </option>
-                                        <option value="Kurang Baik"> Kurang Baik </option>
-                                        <option value="Rusak Berat"> Rusak Berat </option>
+                                        <option value="Rusak"> Rusak </option>
                                     </select>
                                 </div>
                                 <!-- <div class="form-group">

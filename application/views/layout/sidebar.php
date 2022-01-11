@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
         <img src="<?= base_url('adminlte/'); ?>dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">ASET</span>
+        <span class="brand-text font-weight-light"><?= $user['name'] ?></span>
     </a>
 
     <!-- Sidebar -->
@@ -22,6 +22,22 @@
                     </a>
                     <hr color="white">
                 <li class="nav-item">
+                    <a href="<?= base_url('lokasi/tampilkanlokasi') ?>" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Data Lokasi Aset
+                        </p>
+                    </a>
+                    <hr color="white">
+                <li class="nav-item">
+                    <a href="<?= base_url('dashboard') ?>" class="nav-link">
+                        <i class="fas fa-fw fa-user"></i>
+                        <p>
+                            User
+                        </p>
+                    </a>
+                    <hr color="white">   
+                <li class="nav-item">
                     <a href="<?= base_url('masteraset') ?>" class="nav-link">
                         <i class="nav-icon fas fa-box"></i>
                         <p>
@@ -32,9 +48,9 @@
                 <hr color="white">
                 <li class="nav-item">
                     <a href="<?= base_url('masteraset') ?>" class="nav-link">
-                        <i class="nav-icon fas fa-box"></i>
+                        <i class="nav-icon far fa-fw fa-file-alt"></i>
                         <p>
-                            Surah Serah Terima
+                            Surat Serah Terima
                         </p>
                     </a>
                 </li>
@@ -51,14 +67,6 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                        <a href="<?= base_url('asetbaru') ?>" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Aset Baru</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
                         <a href="<?= base_url('lokasi') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Lokasi Aset</p>
@@ -67,7 +75,15 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <a href="<?= base_url('asetbaru') ?>" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Aset Baru</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?= base_url('perbaikan') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Perawatan/Perbaikan Aset</p>
                             </a>
@@ -95,7 +111,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Laporan Stok Barang</p>
+                                <p>Laporan Data Master aset</p>
                             </a>
                         </li>
                     </ul>
@@ -103,7 +119,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Laporan Barang Masuk</p>
+                                <p>Laporan Data Lokasi Aset</p>
                             </a>
                         </li>
                     </ul>
@@ -111,7 +127,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Laporan Barang Keluar</p>
+                                <p>Laporan Pengajuan Surat</p>
                             </a>
                         </li>
                     </ul>
@@ -119,7 +135,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Laporan Outlet</p>
+                                <p>Laporan Perbaikan Aset</p>
                             </a>
                         </li>
                     </ul>
@@ -127,7 +143,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Laporan Suplier</p>
+                                <p>Laporan Perpindahan Aset</p>
                             </a>
                         </li>
                     </ul>
@@ -135,13 +151,13 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Laporan Petugas</p>
+                                <p>Laporan User</p>
                             </a>
                         </li>
                     </ul>
                     <hr color="white">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('auth/logout'); ?>" class="nav-link">
                         <i class="nav-icon fas fa-sign-out-alt"></i>
                         <p>
                             Logout

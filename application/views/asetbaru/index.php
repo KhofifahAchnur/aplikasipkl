@@ -46,6 +46,7 @@
                                         <th>Kondisi</th>
                                         <th>Asal-Usul</th>
                                         <th>Harga Barang</th>
+                                        <th class="text-center">Aksi</th>
                                 </thead>
                                 </thead>
                                 <tbody>
@@ -63,7 +64,7 @@
                                             <td><?= $brg['kondisi'] ?></td>
                                             <td><?= $brg['asal_usul'] ?></td>
                                             <td><?= $brg['harga_brg'] ?></td>
-                                            <td>
+                                            <td class="text-center">
                                                 <a href= "<?= base_url(); ?>asetbaru/edit/<?= $brg['id']; ?>" class="badge badge-pill badge-success">EDIT</a> |
                                                 <a href="<?= base_url(); ?>asetbaru/hapus/<?= $brg['id']; ?>" class="badge badge-pill badge-danger" onclick="return confirm('Yakin ingin menghapus data?');">DELETE</a>
                                             </td>

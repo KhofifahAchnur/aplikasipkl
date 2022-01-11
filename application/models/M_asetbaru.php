@@ -6,6 +6,18 @@ class M_asetbaru extends CI_model
     {
         return $this->db->get('asetbaru')->result_array();
     }
+    
+    public function tampilkondisibaik()
+    {
+        return $this
+            ->db
+            ->select('*')
+            ->order_by('id', 'DESC')
+            ->where('kondisi', 'Baik')
+            ->get('asetbaru')
+            ->result_array();
+    }
+
 
     public function proses_tambah()
     {

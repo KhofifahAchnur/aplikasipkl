@@ -17,3 +17,4 @@ class M_lokasi extends CI_model
     }
     
 }
+

@@ -32,7 +32,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Lokasi Barang</label>
-                                    <input type="text" class="form-control" id="lokasi" placeholder="Masukkan Kode Barang" name="lokasi" value="<?= $barang['lokasi']; ?>">
+                                    <input type="text" class="form-control" id="lokasi" placeholder="Masukkan Lokasi Barang" name="lokasi" value="<?= $barang['lokasi']; ?>">
                                     <div class="form-text text-danger"><?= form_error('lokasi'); ?></div>
                                 </div>
                                 <div class="text-right">

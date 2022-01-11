@@ -12,7 +12,9 @@ class Asetbaru extends CI_Controller
     public function index()
     {
         $data['judul'] = 'Halaman Data Barang';
-        $data['barang'] = $this->M_asetbaru->lihat();
+        $data['barang'] = $this->M_asetbaru->tampilkondisibaik();
+        $data['user'] = $this->db->get_where('user', ['email' =>
+        $this->session->userdata('email')])->row_array();
 
         $this->load->view('layout/header', $data);
         $this->load->view('layout/topbar');
@@ -24,6 +26,8 @@ class Asetbaru extends CI_Controller
     public function tambah()
     {
         $data['judul'] = 'Halaman Tambah Data';
+        $data['user'] = $this->db->get_where('user', ['email' =>
+        $this->session->userdata('email')])->row_array();
 
         $this->form_validation->set_rules('nama_barang', 'Nama Barang', 'required');
         $this->form_validation->set_rules('kode_barang', 'Kode Barang', 'required');
@@ -54,6 +58,8 @@ class Asetbaru extends CI_Controller
     {
         $data['judul'] = 'Halaman Edit Data';
         $data['barang'] = $this->M_asetbaru->getBrgById($id);
+        $data['user'] = $this->db->get_where('user', ['email' =>
+        $this->session->userdata('email')])->row_array();
 
         $this->form_validation->set_rules('nama_barang', 'Nama Barang', 'required');
         $this->form_validation->set_rules('kode_barang', 'Kode Barang', 'required');

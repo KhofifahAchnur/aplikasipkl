@@ -37,6 +37,8 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Lokasi Barang</th>
+                                        <th>Aksi</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     <?php $i = 1;
