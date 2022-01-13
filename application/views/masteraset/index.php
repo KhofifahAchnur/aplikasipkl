@@ -32,7 +32,7 @@
 
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="example1" class="table table-bordered table-striped">
+                            <table id="example1" class="table table-hover table-striped">
                                 <thead>
                                     <tr>
                                         <th>No</th>
@@ -46,6 +46,8 @@
                                         <th>Kondisi</th>
                                         <th>Asal-Usul</th>
                                         <th>Harga Barang</th>
+                                        <th>Lokasi</th>
+                                        <th>Tanggal Masuk</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -63,8 +65,13 @@
                                             <td><?= $brg['kondisi'] ?></td>
                                             <td><?= $brg['asal_usul'] ?></td>
                                             <td><?= $brg['harga_brg'] ?></td>
+                                            <td><?= $brg['lokasi_id'] ?></td>
+                                            <td><?= $brg['tanggal_masuk'] ?></td>
+                                            
                                             <td>
-                                                <a href="<?= base_url('databarang/edit/' . $brg['id']); ?>" class="badge badge-pill badge-success">UBAH</a> |
+                                                <?php if ($brg['kondisi'] == 'Baik') : ?>
+                                                    <a href="<?= base_url('masteraset/gantikondisi/' . $brg['id']); ?>" class="badge badge-pill badge-success">UBAH</a>
+                                                <?php endif; ?>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

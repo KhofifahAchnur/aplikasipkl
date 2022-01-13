@@ -1,25 +1,25 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Asetbaru extends CI_Controller
+class Aset extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_asetbaru');
+        $this->load->model('M_aset');
     }
 
     public function index()
     {
         $data['judul'] = 'Halaman Data Barang';
-        $data['barang'] = $this->M_asetbaru->tampilkondisibaik();
+        $data['barang'] = $this->M_aset->tampilkondisibaik();
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
 
         $this->load->view('layout/header', $data);
         $this->load->view('layout/topbar');
         $this->load->view('layout/sidebar');
-        $this->load->view('asetbaru/index', $data);
+        $this->load->view('aset/index', $data);
         $this->load->view('layout/footer');
     }
 
@@ -44,12 +44,12 @@ class Asetbaru extends CI_Controller
             $this->load->view('layout/header', $data);
             $this->load->view('layout/topbar');
             $this->load->view('layout/sidebar');
-            $this->load->view('asetbaru/tambah');
+            $this->load->view('aset/tambah');
             $this->load->view('layout/footer');
         } else {
-            $this->M_asetbaru->proses_tambah();
+            $this->M_aset->proses_tambah();
             $this->session->set_flashdata('flash', 'Ditambahkan');
-            redirect('asetbaru');
+            redirect('aset');
         }
     }
 
@@ -57,7 +57,7 @@ class Asetbaru extends CI_Controller
     public function edit($id)
     {
         $data['judul'] = 'Halaman Edit Data';
-        $data['barang'] = $this->M_asetbaru->getBrgById($id);
+        $data['barang'] = $this->M_aset->getBrgById($id);
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
 
@@ -77,19 +77,19 @@ class Asetbaru extends CI_Controller
             $this->load->view('layout/header', $data);
             $this->load->view('layout/topbar');
             $this->load->view('layout/sidebar');
-            $this->load->view('asetbaru/edit', $data);
+            $this->load->view('aset/edit', $data);
             $this->load->view('layout/footer');
         } else {
-            $this->M_asetbaru->edit_barang($id);
+            $this->M_aset->edit_barang($id);
             $this->session->set_flashdata('flash', 'Ditambahkan');
-            redirect('asetbaru');
+            redirect('aset');
         }
     }
 
     public function hapus($id)
     {
-        $this->M_asetbaru->hapusData($id);
+        $this->M_aset->hapusData($id);
         $this->session->set_flashdata('flash', 'Dihapus');
-        redirect('asetbaru');
+        redirect('aset');
     }
 }

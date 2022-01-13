@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <a href="<?= base_url('asetbaru/index') ?>" button type="button" class="btn waves-effect waves-light btn-secondary"><i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Kembali</a>
+                        <a href="<?= base_url('aset/index') ?>" button type="button" class="btn waves-effect waves-light btn-secondary"><i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Kembali</a>
                     </ol>
                 </div>
             </div>
@@ -73,11 +73,6 @@
                                         <option value="Rusak"> Rusak </option>
                                     </select>
                                 </div>
-                                <!-- <div class="form-group">
-                                    <label>Kondisi</label>
-                                    <input type="text" class="form-control" id="kondisi" placeholder="Masukkan Kode Barang" name="kondisi" value="<?= $barang['kondisi']; ?>">
-                                    <div class="form-text text-danger"><?= form_error('kondisi'); ?></div>
-                                </div> -->
                                 <div class="form-group">
                                     <label>Asal-Usul</label>
                                     <input type="text" class="form-control" id="asal_usul" placeholder="Masukkan Kode Barang" name="asal_usul" value="<?= $barang['asal_usul']; ?>">

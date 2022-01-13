@@ -22,6 +22,14 @@
                     </a>
                     <hr color="white">
                 <li class="nav-item">
+                    <a href="<?= base_url('penanggung_jawab') ?>" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Data Penanggung Jawab Aset
+                        </p>
+                    </a>
+                    <hr color="white">
+                <li class="nav-item">
                     <a href="<?= base_url('lokasi/tampilkanlokasi') ?>" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
@@ -46,16 +54,6 @@
                     </a>
                 </li>
                 <hr color="white">
-                <li class="nav-item">
-                    <a href="<?= base_url('masteraset') ?>" class="nav-link">
-                        <i class="nav-icon far fa-fw fa-file-alt"></i>
-                        <p>
-                            Surat Serah Terima
-                        </p>
-                    </a>
-                </li>
-               
-                    <hr color="white">
                 <li class="nav-header">TRANSAKSI</li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
@@ -75,7 +73,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                        <a href="<?= base_url('asetbaru') ?>" class="nav-link">
+                        <a href="<?= base_url('aset') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Aset Baru</p>
                             </a>

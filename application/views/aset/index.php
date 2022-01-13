@@ -28,7 +28,7 @@
                             <h3 class="card-title">
                                 Daftar Data Barang
                             </h3>
-                            <a href="<?= base_url('asetbaru/tambah') ?>" button type="button" class="btn waves-effect waves-light btn-primary" style="float:right"><i class="fas fa-plus"></i>&nbsp;&nbsp;Tambah</a>
+                            <a href="<?= base_url('aset/tambah') ?>" button type="button" class="btn waves-effect waves-light btn-primary" style="float:right"><i class="fas fa-plus"></i>&nbsp;&nbsp;Tambah</a>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -46,6 +46,8 @@
                                         <th>Kondisi</th>
                                         <th>Asal-Usul</th>
                                         <th>Harga Barang</th>
+                                        <th>Lokasi</th>
+                                        <th>Tanggal Masuk</th>
                                         <th class="text-center">Aksi</th>
                                 </thead>
                                 </thead>
@@ -54,7 +56,9 @@
                                     foreach ($barang as $brg) : ?>
                                         <tr>
                                             <td><?= $i++; ?></td>
-                                            <td><?= $brg['nama_barang'] ?></td>
+                                            <td>
+                                                <a href="<?= base_url(); ?>history/index/<?= $brg['id']; ?>"><i><?= $brg['nama_barang'] ?></i></a>
+                                            </td>
                                             <td><?= $brg['kode_barang'] ?></td>
                                             <td><?= $brg['register'] ?></td>
                                             <td><?= $brg['merk'] ?></td>
@@ -64,9 +68,11 @@
                                             <td><?= $brg['kondisi'] ?></td>
                                             <td><?= $brg['asal_usul'] ?></td>
                                             <td><?= $brg['harga_brg'] ?></td>
+                                            <td><?= $brg['lokasi_id'] ?></td>
+                                            <td><?= $brg['tanggal_masuk'] ?></td>
                                             <td class="text-center">
-                                                <a href= "<?= base_url(); ?>asetbaru/edit/<?= $brg['id']; ?>" class="badge badge-pill badge-success">EDIT</a> |
-                                                <a href="<?= base_url(); ?>asetbaru/hapus/<?= $brg['id']; ?>" class="badge badge-pill badge-danger" onclick="return confirm('Yakin ingin menghapus data?');">DELETE</a>
+                                                <a href= "<?= base_url(); ?>aset/edit/<?= $brg['id']; ?>" class="btn-success w-100 btn-sm" title="edit"><i class="fas fa-fw fa-edit"></i></a> |
+                                                <a href="<?= base_url(); ?>aset/hapus/<?= $brg['id']; ?>" class="btn-danger w-100 btn-sm" title="hapus" onclick="return confirm('Yakin ingin menghapus data?');"><i class="fas fa-trash-alt"></i></a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

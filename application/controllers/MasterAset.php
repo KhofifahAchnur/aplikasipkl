@@ -22,4 +22,17 @@ class MasterAset extends CI_Controller
         $this->load->view('masteraset/index', $data);
         $this->load->view('layout/footer');
     }
+
+    public function gantikondisi($id)
+    {
+        $status = $this->M_masteraset->getKondisiById($id);
+        $data['status'] = $status;
+
+        $data['user'] = $this->db->get_where('user', ['email' =>
+        $this->session->userdata('email')])->row_array();
+
+        $this->M_masteraset->edit_kondisi($id);
+        $this->session->set_flashdata('flash', 'Berhasil');
+        redirect('masteraset');
+    }
 }

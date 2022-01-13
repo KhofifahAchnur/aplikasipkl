@@ -1,10 +1,10 @@
 <?php
 
-class M_asetbaru extends CI_model
+class M_aset extends CI_model
 {
     public function lihat()
     {
-        return $this->db->get('asetbaru')->result_array();
+        return $this->db->get('aset')->result_array();
     }
     
     public function tampilkondisibaik()
@@ -14,7 +14,7 @@ class M_asetbaru extends CI_model
             ->select('*')
             ->order_by('id', 'DESC')
             ->where('kondisi', 'Baik')
-            ->get('asetbaru')
+            ->get('aset')
             ->result_array();
     }
 
@@ -32,15 +32,17 @@ class M_asetbaru extends CI_model
             "kondisi" => $this->input->post('kondisi', true),
             "asal_usul" => $this->input->post('asal_usul', true),
             "harga_brg" => $this->input->post('harga_brg', true),
+            "lokasi_id" => null,
+            "tanggal_masuk" => date('Y-m-d')
            
         ];
 
-        $this->db->insert('asetbaru', $data);
+        $this->db->insert('aset', $data);
     }
 
     public function getBrgById($id)
     {
-        return $this->db->get_where('asetbaru', ['id' => $id])->row_array();
+        return $this->db->get_where('aset', ['id' => $id])->row_array();
     }
 
     public function edit_barang($id)
@@ -60,12 +62,12 @@ class M_asetbaru extends CI_model
         ];
 
         $this->db->where('id', $id);
-        $this->db->update('asetbaru', $data);
+        $this->db->update('aset', $data);
     }
 
     public function hapusData($id)
     {
         $this->db->where('id', $id);
-        $this->db->delete('asetbaru');
+        $this->db->delete('aset');
     }
 }
