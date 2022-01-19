@@ -23,15 +23,16 @@
                     <hr color="white">
                 <li class="nav-item">
                     <a href="<?= base_url('penanggung_jawab') ?>" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="nav-icon fas fa-address-book"></i>
+                        
                         <p>
-                            Data Penanggung Jawab Aset
+                            Data Penanggung Jawab
                         </p>
                     </a>
                     <hr color="white">
                 <li class="nav-item">
-                    <a href="<?= base_url('lokasi/tampilkanlokasi') ?>" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <a href="<?= base_url('lokasi/index') ?>" class="nav-link">
+                        <i class="nav-icon fas fa-map-marker-alt"></i>
                         <p>
                             Data Lokasi Aset
                         </p>
@@ -53,6 +54,7 @@
                         </p>
                     </a>
                 </li>
+                
                 <hr color="white">
                 <li class="nav-header">TRANSAKSI</li>
                 <li class="nav-item">
@@ -63,14 +65,6 @@
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                        <a href="<?= base_url('lokasi') ?>" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Lokasi Aset</p>
-                            </a>
-                        </li>
-                    </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                         <a href="<?= base_url('aset') ?>" class="nav-link">
@@ -89,13 +83,23 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('perpindahan') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Perpindahan Aset</p>
                             </a>
                         </li>
                     </ul>
+                    
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?= base_url('kondisi') ?>" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kondisi Aset</p>
+                            </a>
+                        </li>
+                    </ul>
                     <hr color="white">
+                    
                 <li class="nav-header">LAPORAN</li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
@@ -133,6 +137,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-tools"></i>
                                 <p>Laporan Perbaikan Aset</p>
                             </a>
                         </li>

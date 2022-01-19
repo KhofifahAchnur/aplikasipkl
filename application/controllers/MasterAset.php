@@ -12,7 +12,9 @@ class MasterAset extends CI_Controller
     public function index()
     {
         $data['judul'] = 'Halaman Data Barang';
+        // $data['aset'] = $this->M_masteraset->tampillokasi();
         $data['aset'] = $this->M_masteraset->lihat();
+        
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
 

@@ -39,7 +39,6 @@
                                         <th>Tanggal Masuk</th>
                                         <th>Nama Barang</th>
                                         <th>Kode Barang</th>
-                                        <th>Penanggung Jawab</th>
                                         <th>Kerusakan</th>
                                         <th>Jenis Service</th>
                                         <th>Biaya</th>
@@ -52,7 +51,6 @@
                                             <td><?= $brg['tanggal_masuk'] ?></td>
                                             <td><?= $brg['nama_barang'] ?></td>
                                             <td><?= $brg['kode_barang'] ?></td>
-                                            <td><?= $brg['penanggung'] ?></td>
                                             <td><?= $brg['kerusakan'] ?></td>
                                             <td><?= $brg['jenis_service'] ?></td>
                                             <td><?= $brg['biaya'] ?></td>

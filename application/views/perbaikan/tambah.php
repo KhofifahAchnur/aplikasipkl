@@ -45,11 +45,6 @@
                                     <div class="form-text text-danger"><?= form_error('kode_barang'); ?></div>
                                 </div>
                                 <div class="form-group">
-                                    <label>Penanggung Jawab</label>
-                                    <input type="text" class="form-control" id="penanggung" placeholder="Masukkan Kode Barang" name="penanggung">
-                                    <div class="form-text text-danger"><?= form_error('penanggung'); ?></div>
-                                </div>
-                                <div class="form-group">
                                     <label>Kerusakan</label>
                                     <input type="text" class="form-control" id="kerusakan" placeholder="Masukkan Kode Barang" name="kerusakan">
                                     <div class="form-text text-danger"><?= form_error('kerusakan'); ?></div>

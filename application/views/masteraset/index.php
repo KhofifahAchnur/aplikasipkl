@@ -65,13 +65,10 @@
                                             <td><?= $brg['kondisi'] ?></td>
                                             <td><?= $brg['asal_usul'] ?></td>
                                             <td><?= $brg['harga_brg'] ?></td>
-                                            <td><?= $brg['lokasi_id'] ?></td>
+                                            <td><?= $brg['lokasi'] ?></td>
                                             <td><?= $brg['tanggal_masuk'] ?></td>
-                                            
                                             <td>
-                                                <?php if ($brg['kondisi'] == 'Baik') : ?>
-                                                    <a href="<?= base_url('masteraset/gantikondisi/' . $brg['id']); ?>" class="badge badge-pill badge-success">UBAH</a>
-                                                <?php endif; ?>
+                                            <a href="<?= base_url('kondisi/tambah'); ?>" class="badge badge-pill badge-success">UBAH KONDISI</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

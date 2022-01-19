@@ -4,7 +4,21 @@ class M_aset extends CI_model
 {
     public function lihat()
     {
-        return $this->db->get('aset')->result_array();
+        $this->db->select('aset.id, lokasi.lokasi, aset.nama_barang, aset.kode_barang, aset.register, aset.merk, aset.ukuran, aset.bahan, aset.tahun, aset.kondisi, aset.asal_usul, aset.harga_brg, aset.tanggal_masuk');
+        $this->db->from('aset');
+        // $this->db->join('history_perpindahan', 'history_perpindahan.id = aset.perpindahan_id');
+        $this->db->join('lokasi', 'lokasi.id = aset.perpindahan_id');
+        $this->db->order_by('aset.id', 'DESC');
+        // return $this->db->where('kondisi', 'Baik');
+        return $this->db->get()->result_array();
+    }
+
+    public function tampilaset()
+    {
+        $this->db->select('aset.nama_barang, aset.kode_barang');
+        $this->db->from('aset');
+        $this->db->order_by('aset.id', 'DESC');
+        return $this->db->get()->result_array();
     }
     
     public function tampilkondisibaik()
@@ -32,8 +46,9 @@ class M_aset extends CI_model
             "kondisi" => $this->input->post('kondisi', true),
             "asal_usul" => $this->input->post('asal_usul', true),
             "harga_brg" => $this->input->post('harga_brg', true),
-            "lokasi_id" => null,
+            "perpindahan_id" => '11',
             "tanggal_masuk" => date('Y-m-d')
+            
            
         ];
 

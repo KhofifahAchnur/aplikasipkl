@@ -1,3 +1,4 @@
+<?= var_dump($barang); die; ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -5,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Data Barang</h1>
+                    <h1>Data Master Aset</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="<?= base_url('dashboard') ?>">Home</a></li>
-                        <li class="breadcrumb-item active">Data Barang</li>
+                        <li class="breadcrumb-item active">Data Aset</li>
                     </ol>
                 </div>
             </div>
@@ -26,33 +27,34 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">
-                                Daftar Data Barang
+                                Daftar Data Master Aset
                             </h3>
-                            <a href="<?= base_url('lokasi/tambah') ?>" button type="button" class="btn waves-effect waves-light btn-primary" style="float:right"><i class="fas fa-plus"></i>&nbsp;&nbsp;Tambah</a>
                         </div>
+
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="example1" class="table table-bordered table-striped">
+                            <table id="example1" class="table table-hover table-striped">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Lokasi Barang</th>
-                                        <th>Nama</th>
-                                        <th>Aksi</th>
+                                        <th>Nama Barang</th>
+                                        <th>Kode Barang</th>
+                                        <th>lokasi</th>
+                                        <th>Nama Penanggung Jawab</th>
+                                        <th>Tanggal Perpindahan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $i = 1;
-                                    foreach ($barang as $brg) : ?>
+                                    <?php foreach ($barang as $index => $brg) : ?>
                                         <tr>
-                                            <td><?= $i++; ?></td>
-                                            <td><?= $brg['lokasi'] ?></td>
-                                            <td><?= $brg['nama'] ?></td>
-
-                                            <td>
-                                                <a href= "<?= base_url(); ?>lokasi/edit/<?= $brg['id']; ?>" class="badge badge-pill badge-success">EDIT</a> |
-                                                <a href="<?= base_url(); ?>lokasi/hapus/<?= $brg['id']; ?>" class="badge badge-pill badge-danger" onclick="return confirm('Yakin ingin menghapus data?');">DELETE</a>
-                                            </td>
+                                            <td><?= ++$index; ?></td>
+                                            <td><?= $brg['aset_id'] ?></td>
+                                            <td><?= $brg['aset_id'] ?></td>
+                                            <td><?= $brg['lokasi_id'] ?></td>
+                                            <td><?= $brg['penanggung_jawab_id'] ?></td>
+                                            <td><?= $brg['tanggal'] ?></td>
+                                            
+                                           
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>

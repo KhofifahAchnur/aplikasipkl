@@ -68,11 +68,11 @@
                                             <td><?= $brg['kondisi'] ?></td>
                                             <td><?= $brg['asal_usul'] ?></td>
                                             <td><?= $brg['harga_brg'] ?></td>
-                                            <td><?= $brg['lokasi_id'] ?></td>
+                                            <td><?= $brg['lokasi'] ?></td>
                                             <td><?= $brg['tanggal_masuk'] ?></td>
-                                            <td class="text-center">
-                                                <a href= "<?= base_url(); ?>aset/edit/<?= $brg['id']; ?>" class="btn-success w-100 btn-sm" title="edit"><i class="fas fa-fw fa-edit"></i></a> |
-                                                <a href="<?= base_url(); ?>aset/hapus/<?= $brg['id']; ?>" class="btn-danger w-100 btn-sm" title="hapus" onclick="return confirm('Yakin ingin menghapus data?');"><i class="fas fa-trash-alt"></i></a>
+                                            <td style="width: 100px;" class="text-center">
+                                                <a href= "<?= base_url(); ?>aset/edit/<?= $brg['id']; ?>" class="btn-success  btn-sm" title="edit"><i class="fas fa-fw fa-edit"></i></a> |
+                                                <a href="<?= base_url(); ?>aset/hapus/<?= $brg['id']; ?>" class="btn-danger  btn-sm" title="hapus" onclick="return confirm('Yakin ingin menghapus data?');"><i class="fas fa-trash-alt"></i></a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

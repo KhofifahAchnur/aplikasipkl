@@ -28,17 +28,20 @@
                         </div>
                         <!-- form start -->
                         <form action = "" method = "post">
-                        <input type="hidden" name="id" value="<?= $barang['id']; ?>">
+                        <input type="hidden" name="id" value="<?= $lokasi['id']; ?>">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Lokasi Barang</label>
-                                    <input type="text" class="form-control" id="lokasi" placeholder="Masukkan Lokasi Barang" name="lokasi" value="<?= $barang['lokasi']; ?>">
+                                    <input type="text" class="form-control" id="lokasi" placeholder="Masukkan Lokasi Barang" name="lokasi" value="<?= $lokasi['lokasi']; ?>">
                                     <div class="form-text text-danger"><?= form_error('lokasi'); ?></div>
                                 </div>
                                 <div class="form-group">
-                                    <label>Penanggung Jawab</label>
-                                    <input type="text" class="form-control" id="penanggung_jawab_id" placeholder="Masukkan Penanggung Jawab Barang" name="penanggung_jawab_id" value="<?= $barang['penanggung_jawab_id']; ?>">
-                                    <div class="form-text text-danger"><?= form_error('penanggung_jawab_id'); ?></div>
+                                <label>Penanggung Jawab</label>
+                                    <select name="nama" class="form-control" id="nama">
+                                        <?php foreach($penanggung_jawab as $index => $pj): ?>
+                                        <option value="<?= $pj['id']; ?>"><?= $pj['nama']; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
                                 </div>
                                 <div class="text-right">
                                     <button type="submit" class="btn btn-primary">Simpan</button>

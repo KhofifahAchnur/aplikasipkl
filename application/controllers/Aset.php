@@ -12,7 +12,8 @@ class Aset extends CI_Controller
     public function index()
     {
         $data['judul'] = 'Halaman Data Barang';
-        $data['barang'] = $this->M_aset->tampilkondisibaik();
+        $data['barang'] = $this->M_aset->lihat();
+        // $data['barang'] = $this->M_aset->tampilkondisibaik();
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
 
