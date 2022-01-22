@@ -76,4 +76,29 @@ class Penanggung_jawab extends CI_Controller
         $this->session->set_flashdata('flash', 'Dihapus');
         redirect('penanggung_jawab');
     }
+
+    public function laporan()
+    {
+        // panggil library yang kita buat sebelumnya yang bernama pdfgenerator
+        $this->load->library('pdfgenerator');
+
+        $data['barang'] = $this->M_penanggung_jawab->lihat();
+        $this->load->view('penanggung_jawab/laporan', $data);
+
+        // title dari pdf
+        $this->data['judul'] = 'Laporan Aset';
+
+        // filename dari pdf ketika didownload
+        $file_pdf = 'laporan outlet';
+        // setting paper
+        $paper = 'A4';
+        //orientasi paper potrait / landscape
+        $orientation = "landscape";
+
+        $html = $this->load->view('penanggung_jawab/laporan', $this->data, true);
+
+        // run dompdf
+        $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
+
+}
 }

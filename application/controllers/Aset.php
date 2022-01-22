@@ -13,7 +13,6 @@ class Aset extends CI_Controller
     {
         $data['judul'] = 'Halaman Data Barang';
         $data['barang'] = $this->M_aset->lihat();
-        // $data['barang'] = $this->M_aset->tampilkondisibaik();
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
 
@@ -93,4 +92,29 @@ class Aset extends CI_Controller
         $this->session->set_flashdata('flash', 'Dihapus');
         redirect('aset');
     }
+
+    public function laporan()
+    {
+        // panggil library yang kita buat sebelumnya yang bernama pdfgenerator
+        $this->load->library('pdfgenerator');
+
+        $data['barang'] = $this->M_aset->lihat();
+        $this->load->view('aset/laporan', $data);
+
+        // title dari pdf
+        $this->data['judul'] = 'Laporan Aset';
+
+        // filename dari pdf ketika didownload
+        $file_pdf = 'laporan outlet';
+        // setting paper
+        $paper = 'A4';
+        //orientasi paper potrait / landscape
+        $orientation = "landscape";
+
+        $html = $this->load->view('aset/laporan', $this->data, true);
+
+        // run dompdf
+        $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
+
+}
 }

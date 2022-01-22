@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Perpindahan Barang</h1>
+                    <h1>Data Barang</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -20,7 +20,7 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-10 ml-6 mr-10">
+                <div class="col-12 ml-12 mr-12">
                     <!-- /.card-header -->
                     <div class="card card-primary">
                         <div class="card-header">
@@ -28,7 +28,7 @@
                         </div>
                         <!-- form start -->
                         <form action="" method="post">
-                            <input type="hidden" name="id" value="<?= $barang['id']; ?>">
+                            <!-- <input type="hidden" name="id" value="<?= $barang['id']; ?>"> -->
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Nama Barang</label>
@@ -57,16 +57,15 @@
                                 </div>
                                 <div class="text-center">
                                 
-                                    <a href="<?= base_url('perpindahan/tambah/').$barang['id'] ?>" button type="button" class="btn btn-primary"></button> &nbsp;&nbsp;Pindahkan</a>
+                                    <a href="<?= base_url('perpindahan/tambah/').$barang['id'] ?>" button type="button" class="btn btn-primary"></button> &nbsp;&nbsp;Perpindahan</a>
                                 </div>
                             </div>
                         </form>
                     </div>
-                </div>
                 
-                <!-- /.card-body -->
+                    </div>
+                </div>
             </div>
-            
             <!-- /.card -->
         </div>
         <!-- /.col -->

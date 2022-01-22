@@ -32,27 +32,22 @@
                                 <div class="card-body">
                                 <div class="form-group">
                                     <label>Nama Barang</label>
-                                    <select name="nama_barang" class="form-control" id="nama_barang">
-                                        <?php foreach ($aset as $index => $brg) : ?>
-                                            <option value="<?= $brg['nama_barang']; ?>"><?= $brg['nama_barang']; ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
+                                    <input hidden type="text" class="form-control" id="nama_barang" name="nama_barang" value="<?= $kondisi['id'] ?>">
+                                    <input readonly type="text" class="form-control" id="" name="" value="<?= $kondisi['nama_barang'] ?>">
+                                    <div class="form-text text-danger"><?= form_error('nama_barang'); ?></div>
                                 </div>
                                 <div class="form-group">
                                     <label>Kode Barang</label>
-                                    <select name="kode_barang" class="form-control" id="kode_barang">
-                                        <?php foreach ($aset as $index => $brg) : ?>
-                                            <option value="<?= $brg['kode_barang']; ?>"><?= $brg['kode_barang']; ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
+                                    <input readonly type="text" class="form-control" id="kode_barang" name="kode_barang" value="<?= $kondisi['kode_barang'] ?>">
+                                    <div class="form-text text-danger"><?= form_error('kode_barang'); ?></div>
                                 </div>
                                 <div class="form-group">
                                     <label>Kondisi</label>
                                     <select name="kondisi" class="form-control" id="kondisi">
-                                        <option>- Pilih Kondisi -</option>
+                                        <option value="<?= $kondisi['kondisi']; ?>"><?= $kondisi['kondisi']; ?></option>
                                         <option value="Baik"> Baik </option>
-                                        <option value="Rusak"> Kurang Baik </option>
-                                        <option value="Rusak"> Rusak Berat </option>
+                                        <option value="Kurang Baik"> Kurang Baik </option>
+                                        <option value="Rusak Berat"> Rusak Berat </option>
                                     </select>
                                 </div>
                                     <div class="text-right">

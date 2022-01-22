@@ -38,7 +38,7 @@
                                         <th>No</th>
                                         <th>Nama </th>
                                         <th>NIP</th>
-                                        <th>Aksi</th>
+                                        <th class="text-center">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -49,7 +49,7 @@
                                             <td><?= $brg['nama'] ?></td>
                                             <td><?= $brg['nip'] ?></td>
 
-                                            <td>
+                                            <td class="text-center">
                                                 <a href= "<?= base_url(); ?>penanggung_jawab/edit/<?= $brg['id']; ?>" class="badge badge-pill badge-success">EDIT</a> |
                                                 <a href="<?= base_url(); ?>penanggung_jawab/hapus/<?= $brg['id']; ?>" class="badge badge-pill badge-danger" onclick="return confirm('Yakin ingin menghapus data?');">DELETE</a>
                                             </td>

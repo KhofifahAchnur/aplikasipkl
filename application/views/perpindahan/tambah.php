@@ -10,7 +10,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <a href="<?= base_url('kondisi/index') ?>" button type="button" class="btn waves-effect waves-light btn-secondary"><i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Kembali</a>
-                       
+
                     </ol>
                 </div>
             </div>
@@ -28,39 +28,26 @@
                             <h3 class="card-title">Tambah Data Perpindahan Barang</h3>
                         </div>
                         <!-- form start -->
-                        <form action = "" method = "post">
-                        <!-- <input type="hidden" name="id" value="<?= $pindah['id']; ?>"> -->
+                        <form action="" method="post">
+                            <!-- <input type="hidden" name="id" value="<?= $pindah['id']; ?>"> -->
                             <div class="card-body">
-                            <div class="form-group">
+                                <div class="form-group">
                                     <label>Nama Barang</label>
-                                    <select name="nama_barang" class="form-control" id="nama_barang">
-                                        <?php foreach ($aset as $index => $brg) : ?>
-                                            <option value="<?= $brg['nama_barang']; ?>"><?= $brg['nama_barang']; ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
+                                    <input hidden type="text" class="form-control" id="nama_barang" name="nama_barang" value="<?= $aset['id'] ?>">
+                                    <input readonly type="text" class="form-control" id="" name="" value="<?= $aset['nama_barang'] ?>">
+                                    <div class="form-text text-danger"><?= form_error('nama_barang'); ?></div>
                                 </div>
-                            <div class="form-group">
+                                <div class="form-group">
                                     <label>Kode Barang</label>
-                                    <select name="kode_barang" class="form-control" id="kode_barang">
-                                        <?php foreach ($aset as $index => $brg) : ?>
-                                            <option value="<?= $brg['kode_barang']; ?>"><?= $brg['kode_barang']; ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
+                                    <input readonly type="text" class="form-control" id="kode_barang" name="kode_barang" value="<?= $aset['kode_barang'] ?>">
+                                    <div class="form-text text-danger"><?= form_error('kode_barang'); ?></div>
                                 </div>
-                            <div class="form-group">
+
+                                <div class="form-group">
                                     <label>Lokasi Barang</label>
                                     <select name="lokasi" class="form-control" id="lokasi">
                                         <?php foreach ($lokasi as $index => $lks) : ?>
-                                            <option value="<?= $lks['id']; ?>"><?= $lks
-                                            ['lokasi']; ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Penanggung Jawab</label>
-                                    <select name="nama" class="form-control" id="nama">
-                                        <?php foreach ($penanggung_jawab as $index => $pj) : ?>
-                                            <option value="<?= $pj['id']; ?>"><?= $pj['nama']; ?></option>
+                                            <option value="<?= $lks['id']; ?>"><?= $lks['lokasi']; ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>

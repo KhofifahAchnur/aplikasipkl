@@ -36,13 +36,27 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Nama Barang</label>
-                                    <input type="text" class="form-control" id="nama_barang" placeholder="Masukkan Kode Barang" name="nama_barang">
-                                    <div class="form-text text-danger"><?= form_error('nama_barang'); ?></div>
+                                    <select name="nama_barang" class="form-control" id="nama_barang">
+                                        <?php foreach ($aset as $index => $brg) : ?>
+                                            <option value="<?= $brg['id']; ?>"><?= $brg['nama_barang']; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                            <div class="form-group">
+                                    <label>Kode Barang</label>
+                                    <select name="kode_barang" class="form-control" id="kode_barang">
+                                        <?php foreach ($aset as $index => $brg) : ?>
+                                            <option value="<?= $brg['id']; ?>"><?= $brg['kode_barang']; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Kode Barang</label>
-                                    <input type="text" class="form-control" id="kode_barang" placeholder="Masukkan Kode Barang" name="kode_barang">
-                                    <div class="form-text text-danger"><?= form_error('kode_barang'); ?></div>
+                                    <label>Kondisi</label>
+                                    <select name="kondisi" class="form-control" id="kondisi">
+                                        <?php foreach ($aset as $index => $brg) : ?>
+                                            <option value="<?= $brg['id']; ?>"><?= $brg['kondisi']; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Kerusakan</label>

@@ -9,7 +9,6 @@ class History extends CI_Controller
         $this->load->model('M_aset');
         $this->load->model('M_perpindahan');
         $this->load->model('M_kondisi');
-        
     }
 
     public function index($id)
@@ -19,7 +18,7 @@ class History extends CI_Controller
         $data['barang'] = $this->M_aset->getBrgById($id);
         // $data['barang'] = $this->M_aset->lihat();
         $data['pindah'] = $this->M_perpindahan->lihat();
-        
+
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
 
@@ -57,7 +56,5 @@ class History extends CI_Controller
             $this->session->set_flashdata('flash', 'Ditambahkan');
             redirect('history');
         }
-
-}
-
+    }
 }

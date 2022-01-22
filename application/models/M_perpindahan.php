@@ -9,7 +9,7 @@ class M_perpindahan extends CI_model
         $this->db->from('history_perpindahan');
         $this->db->join('aset', 'aset.id = history_perpindahan.aset_id ');
         $this->db->join('lokasi', 'lokasi.id = history_perpindahan.lokasi_id');
-        $this->db->join('penanggung_jawab', 'penanggung_jawab.id = history_perpindahan.penanggung_jawab_id');
+        $this->db->join('penanggung_jawab', 'penanggung_jawab.id = lokasi.penanggung_jawab_id');
         $this->db->order_by('history_perpindahan.id', 'DESC');
         return $this->db->get()->result_array();
 
@@ -19,9 +19,7 @@ class M_perpindahan extends CI_model
     {
         $data = [
             "aset_id" => $this->input->post('nama_barang', true),
-            "aset_id" => $this->input->post('kode_barang', true),
             "lokasi_id" => $this->input->post('lokasi', true),
-            "penanggung_jawab_id" => $this->input->post('nama', true),
             "tanggal" => date('Y-m-d')
            
         ];

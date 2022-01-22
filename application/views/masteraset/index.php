@@ -48,7 +48,7 @@
                                         <th>Harga Barang</th>
                                         <th>Lokasi</th>
                                         <th>Tanggal Masuk</th>
-                                        <th>Aksi</th>
+                                        <th class="text-center">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -68,7 +68,8 @@
                                             <td><?= $brg['lokasi'] ?></td>
                                             <td><?= $brg['tanggal_masuk'] ?></td>
                                             <td>
-                                            <a href="<?= base_url('kondisi/tambah'); ?>" class="badge badge-pill badge-success">UBAH KONDISI</a>
+                                            <!-- <a href="<?= base_url('kondisi/tambah'); ?>" class="badge badge-pill badge-success">UBAH KONDISI</a> -->
+                                            <a href= "<?= base_url(); ?>kondisi/tambah/<?= $brg['id']; ?>" class="badge badge-pill badge-success">UBAH KONDISI</a> 
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

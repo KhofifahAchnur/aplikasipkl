@@ -1,4 +1,4 @@
-<?= var_dump($barang); die; ?>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -6,13 +6,14 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Data Master Aset</h1>
+                    <h1>Data Barang</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="<?= base_url('dashboard') ?>">Home</a></li>
-                        <li class="breadcrumb-item active">Data Aset</li>
+                    <a href="<?= base_url('perpindahan/tambah') ?>" button type="button" class="btn waves-effect waves-light btn-primary" style="float:right"><i class="fas fa-plus"></i>&nbsp;&nbsp;Tambah</a>
+                        
                     </ol>
+                    
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -22,13 +23,11 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
-                    <!-- /.card-header -->
-                    <div class="card">
+            <div class="col-lg-12">
+                        <!-- /.card-header -->
+                        <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">
-                                Daftar Data Master Aset
-                            </h3>
+                            <h3 class="card-title">Perpindahan Kondisi</h3>
                         </div>
 
                         <!-- /.card-header -->
@@ -48,10 +47,10 @@
                                     <?php foreach ($barang as $index => $brg) : ?>
                                         <tr>
                                             <td><?= ++$index; ?></td>
-                                            <td><?= $brg['aset_id'] ?></td>
-                                            <td><?= $brg['aset_id'] ?></td>
-                                            <td><?= $brg['lokasi_id'] ?></td>
-                                            <td><?= $brg['penanggung_jawab_id'] ?></td>
+                                            <td><?= $brg['nama_barang'] ?></td>
+                                            <td><?= $brg['kode_barang'] ?></td>
+                                            <td><?= $brg['lokasi'] ?></td>
+                                            <td><?= $brg['nama'] ?></td>
                                             <td><?= $brg['tanggal'] ?></td>
                                             
                                            

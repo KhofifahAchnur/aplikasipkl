@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Data Barang</h1>
+                    <h1>Kondisi Barang</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -46,11 +46,8 @@
                                             <td><?= $i++; ?></td>
                                             <td><?= $kds['nama_barang'] ?></td>
                                             <td><?= $kds['kode_barang'] ?></td>
-                                            <td><?= $kds['kondisi_barang'] ?></td>
-                                            <td><?= $kds['tanggal_masuk'] ?></td>
-                                            <td>
-                                            <a href="<?= base_url('perpindahan/tambah/').$barang['id'] ?>" button type="button" class="btn btn-primary"></button> &nbsp;&nbsp;Pindahkan</a>
-                                            </td>
+                                            <td><?= $kds['kondisi'] ?></td>
+                                            <td><?= $kds['tanggal'] ?></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>

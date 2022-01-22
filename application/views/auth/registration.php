@@ -1,8 +1,10 @@
-
-
+<div class="text-center mt-3 mb-3">
+<img width=270 height=270 src='<?= base_url('adminlte/dist/img/logo.png') ?>' align="top">
+</div>
     <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5 col-lg-7 mx-auto">
+            
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">

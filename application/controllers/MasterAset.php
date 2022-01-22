@@ -13,7 +13,7 @@ class MasterAset extends CI_Controller
     {
         $data['judul'] = 'Halaman Data Barang';
         // $data['aset'] = $this->M_masteraset->tampillokasi();
-        $data['aset'] = $this->M_masteraset->lihat();
+      $data['aset'] = $this->M_masteraset->lihat();
         
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
@@ -37,4 +37,29 @@ class MasterAset extends CI_Controller
         $this->session->set_flashdata('flash', 'Berhasil');
         redirect('masteraset');
     }
+
+    public function laporan()
+    {
+        // panggil library yang kita buat sebelumnya yang bernama pdfgenerator
+        $this->load->library('pdfgenerator');
+
+        $data['aset'] = $this->M_masteraset->lihat();
+        $this->load->view('masteraset/laporan', $data);
+
+        // title dari pdf
+        $this->data['judul'] = 'Laporan Aset';
+
+        // filename dari pdf ketika didownload
+        $file_pdf = 'laporan outlet';
+        // setting paper
+        $paper = 'A4';
+        //orientasi paper potrait / landscape
+        $orientation = "landscape";
+
+        $html = $this->load->view('masteraset/laporan', $this->data, true);
+
+        // run dompdf
+        $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
+
+}
 }

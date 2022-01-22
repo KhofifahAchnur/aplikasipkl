@@ -38,7 +38,7 @@
                                         <th>No</th>
                                         <th>Lokasi Barang</th>
                                         <th>Nama</th>
-                                        <th>Aksi</th>
+                                        <th class="text-center">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -46,10 +46,12 @@
                                     foreach ($barang as $brg) : ?>
                                         <tr>
                                             <td><?= $i++; ?></td>
-                                            <td><?= $brg['lokasi'] ?></td>
+                                            <td>
+                                                <a href="<?= base_url(); ?>lokasi/brgberdasarkanlks/<?= $brg['id']; ?>"><i><?= $brg['lokasi'] ?></i></a>
+                                            </td>
                                             <td><?= $brg['nama'] ?></td>
 
-                                            <td>
+                                            <td class="text-center">
                                                 <a href= "<?= base_url(); ?>lokasi/edit/<?= $brg['id']; ?>" class="badge badge-pill badge-success">EDIT</a> |
                                                 <a href="<?= base_url(); ?>lokasi/hapus/<?= $brg['id']; ?>" class="badge badge-pill badge-danger" onclick="return confirm('Yakin ingin menghapus data?');">DELETE</a>
                                             </td>
