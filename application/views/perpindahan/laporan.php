@@ -56,6 +56,8 @@
 <body>
     <img src="<?= base_url() ?>adminlte/dist/img/logo.png" style="position: absolute; width: 125px; height: 130px;">
     <table style="width: 103%;">
+    <br>
+    <br>
         <tr>
             <td align="center">
                 <p>
@@ -83,7 +85,7 @@
             <?php $i = 1;
             foreach ($barang as $brg) : ?>
                 <tr>
-                    <td><?= $i++; ?></td>
+                    <td align="center"><?= $i++; ?></td>
                     <td align="center"><?= $brg['nama_barang'] ?></td>
                     <td align="center"><?= $brg['kode_barang'] ?></td>
                     <td align="center"><?= $brg['lokasi'] ?></td>
@@ -93,20 +95,12 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-    <table>
+    <table width="50%" align="right" border="0" style="margin-top: 20px;">
         <tr>
-            <td colspan="3">
-                <div style="float: right;">
-                    <div style="text-align: end;">
-                        <p>Hormat Kami</p>
-                        <p>Kepala SDN Handil Bakti</p>
-
-                        <p></p>
-                        <p class="me-5">SURYA ABDI, S.Pd</p>
-                        <p>NIP.19670505 198804 1 002</p>
-                    </div>
-                </div>
-            </td>
+        <tr>
+            <td width="50%"></td>
+            <td align="center">Banjarmasin,<?php echo date('d/m/Y'); ?><br>Mengetahui</small><br><br><br><br>Hj. Netta Herawati<br>______________<br><strong>Kepala Tata Usaha</strong></td>
+        </tr>
         </tr>
     </table>
 

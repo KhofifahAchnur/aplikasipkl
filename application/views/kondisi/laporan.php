@@ -56,6 +56,8 @@
 <body>
     <img src="<?= base_url() ?>adminlte/dist/img/logo.png" style="position: absolute; width: 125px; height: 130px;">
     <table style="width: 103%;">
+    <br>
+    <br>
         <tr>
             <td align="center">
                 <p>
@@ -90,11 +92,11 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-    <table width="50%" align="right" border="0">
+    <table width="50%" align="right" border="0" style="margin-top: 20px;">
         <tr>
         <tr>
             <td width="50%"></td>
-            <td align="center">Banjarmasin,<?php echo date('d/m/Y'); ?><br>Mengetahui</small><br><br><br><br>Yudhy Kurniawan<br>______<br><strong>Pemimpin</strong></td>
+            <td align="center">Banjarmasin,<?php echo date('d/m/Y'); ?><br>Mengetahui</small><br><br><br><br>Hj. Netta Herawati<br>______<br><strong>Kepala Tata Usaha</strong></td>
         </tr>
         </tr>
     </table>

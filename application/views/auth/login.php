@@ -2,6 +2,7 @@
 <!-- <img width=220 height=220 src='adminlte/dist/img/logo.png'/ align="right">
 <img width=200 height=200 src='adminlte/dist/img/wuri.png'/ align="center"> -->
 <!-- Outer Row -->
+<div class="text-center mt-3 mb-3">
 <div class="row justify-content-center">
 
     <div class="col-lg-5">

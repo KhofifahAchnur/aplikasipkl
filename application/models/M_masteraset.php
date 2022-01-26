@@ -9,7 +9,7 @@ class M_masteraset extends CI_model
         // $this->db->join('history_perpindahan', 'history_perpindahan.id = aset.perpindahan_id');
         $this->db->join('lokasi', 'lokasi.id = aset.perpindahan_id');
         $this->db->order_by('aset.id', 'DESC');
-        $this->db->where_in('lokasi',array('Ruang Kepala', 'Ruang Tata Usaha', 'Ruang OSIS'));
+        $this->db->where_in('lokasi',array('Ruang BK', 'Ruang Lab Komputer', 'Ruang Lab IPA', 'Ruang Lab BAHASA', 'Ruang OSIS'));
         return $this->db->get()->result_array();
     }
 
