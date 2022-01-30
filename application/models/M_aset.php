@@ -8,6 +8,7 @@ class M_aset extends CI_model
         $this->db->from('aset');
         $this->db->join('lokasi', 'lokasi.id = aset.perpindahan_id');
         $this->db->order_by('aset.id', 'DESC');
+        // $this->db->where_in('lokasi',array('Gudang'));
         return $this->db->get()->result_array();
     }
 
@@ -93,4 +94,9 @@ class M_aset extends CI_model
         $this->db->where('id', $id);
         $this->db->delete('aset');
     }
+
+//     public function jumlah()
+//     {
+//         return $this->db->get('aset')->num_rows();
+//     }
 }

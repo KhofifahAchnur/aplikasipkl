@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
         <img src="<?= base_url('adminlte/'); ?>dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light"><?= $user['name'] ?></span>
+        <span class="brand-text font-weight-light"><?= $this->session->userdata['username'] ?></span>
     </a>
 
     <!-- Sidebar -->
@@ -14,7 +14,7 @@
                 <!-- Add icons to the links using the .nav-icmon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="<?= base_url('dashboard') ?>" class="nav-link">
+                    <a href="<?= base_url('admin/dashboard') ?>" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -23,20 +23,20 @@
                     <hr color="white">
                 <li class="nav-header">MASTER DATA</li>
                 <li class="nav-item">
-                    <a href="<?= base_url('penanggung_jawab') ?>" class="nav-link">
+                    <a href="<?= base_url('admin/penanggung_jawab') ?>" class="nav-link">
                         <i class="nav-icon fas fa-address-book"></i>
 
                         <p>
                             Data Penanggung Jawab
                         </p>
                     </a>
-                <li class="nav-item">
-                    <a href="<?= base_url('member') ?>" class="nav-link">
+                <!-- <li class="nav-item">
+                    <a href="<?= base_url('admin/member') ?>" class="nav-link">
                         <i class="fas fa-fw fa-user"></i>
                         <p>
                             Data Member
                         </p>
-                    </a>
+                    </a> -->
                 <hr color="white">
                 <li class="nav-header">TRANSAKSI</li>
                 <li class="nav-item">
@@ -49,7 +49,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('masteraset') ?>" class="nav-link">
+                            <a href="<?= base_url('admin/masteraset') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Data Master Aset
@@ -59,7 +59,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('aset') ?>" class="nav-link">
+                            <a href="<?= base_url('admin/aset') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Aset Baru</p>
                             </a>
@@ -67,7 +67,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('lokasi/index') ?>" class="nav-link">
+                            <a href="<?= base_url('admin/lokasi/index') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
                                     Data Lokasi Aset
@@ -86,7 +86,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('perbaikan') ?>" class="nav-link">
+                            <a href="<?= base_url('admin/perbaikan') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Perawatan/Perbaikan Aset</p>
                             </a>
@@ -94,7 +94,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('perpindahan') ?>" class="nav-link">
+                            <a href="<?= base_url('admin/perpindahan') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Perpindahan Aset</p>
                             </a>
@@ -102,7 +102,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('kondisi') ?>" class="nav-link">
+                            <a href="<?= base_url('admin/kondisi') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Kondisi Aset</p>
                             </a>
@@ -120,7 +120,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('masteraset/laporan') ?>" class="nav-link">
+                            <a href="<?= base_url('admin/masteraset/laporan') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Laporan Data Master aset</p>
                             </a>
@@ -128,7 +128,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('aset/laporan') ?>" class="nav-link">
+                            <a href="<?= base_url('admin/aset/laporan') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Laporan Data aset</p>
                             </a>
@@ -136,7 +136,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('admin/lokasi/laporan') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Laporan Data Lokasi Aset</p>
                             </a>
@@ -144,7 +144,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('penanggung_jawab/laporan') ?>" class="nav-link">
+                            <a href="<?= base_url('admin/penanggung_jawab/laporan') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Laporan Data Penanggung Jawab Aset</p>
                             </a>
@@ -152,7 +152,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('perbaikan/laporan') ?>" class="nav-link">
+                            <a href="<?= base_url('admin/perbaikan/laporan') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Laporan Perbaikan Aset</p>
                             </a>
@@ -160,7 +160,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('perpindahan/laporan') ?>" class="nav-link">
+                            <a href="<?= base_url('admin/perpindahan/laporan') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Laporan Perpindahan Aset</p>
                             </a>
@@ -168,9 +168,9 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('admin/kondisi/laporan') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Laporan User</p>
+                                <p>Laporan Kondisi</p>
                             </a>
                         </li>
                     </ul>

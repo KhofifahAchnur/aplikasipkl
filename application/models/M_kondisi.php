@@ -37,4 +37,9 @@ class M_kondisi extends CI_model
     {
         return $this->db->get_where('history_kondisi', ['id' => $id])->row_array();
     }
+
+    // public function jumlah()
+    // {
+    //     return $this->db->get('history_kondisi')->num_rows();
+    // }
 }

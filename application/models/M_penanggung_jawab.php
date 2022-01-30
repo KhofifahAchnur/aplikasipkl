@@ -12,6 +12,9 @@ class M_penanggung_jawab extends CI_model
         $data = [
             "nama" => $this->input->post('nama', true),
             "nip" => $this->input->post('nip', true),
+            "username" => $this->input->post('username', true),
+            "password" => md5($this->input->post('password', true)),
+            "hak_akses" => $this->input->post('hak_akses', true),
         ];
 
         $this->db->insert('penanggung_jawab', $data);
@@ -38,4 +41,9 @@ class M_penanggung_jawab extends CI_model
         $this->db->where('id', $id);
         $this->db->delete('penanggung_jawab');
     }
+
+    // public function jumlah()
+    // {
+    //     return $this->db->get('Penanggung_jawab')->num_rows();
+    // }
 }
