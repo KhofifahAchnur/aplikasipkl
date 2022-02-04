@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Data Barang</h1>
+                    <h1>Data Perpindahan Barang</h1>
                 </div>
                 <div class="col-sm-6">
                 </div>
@@ -22,7 +22,7 @@
                         <!-- /.card-header -->
                         <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Perpindahan Kondisi</h3>
+                            <h3 class="card-title">Perpindahan Barang</h3>
                         </div>
 
                         <!-- /.card-header -->

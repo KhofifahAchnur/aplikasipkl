@@ -4,14 +4,9 @@
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Data Barang</h1>
-                </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="<?= base_url('admin/dashboard') ?>">Home</a></li>
-                        <li class="breadcrumb-item active">Data Barang</li>
-                    </ol>
+                <div class="col-sm-12" align="center">
+                    <h1>DATA RUANGAN</h1>
+                    <h2></h2>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -24,12 +19,6 @@
                 <div class="col-12">
                     <!-- /.card-header -->
                     <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                Daftar Data Barang
-                            </h3>
-                            <a href="<?= base_url('admin/aset/tambah') ?>" button type="button" class="btn waves-effect waves-light btn-primary" style="float:right"><i class="fas fa-plus"></i>&nbsp;&nbsp;Tambah</a>
-                        </div>
                         <!-- /.card-header -->
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-striped">

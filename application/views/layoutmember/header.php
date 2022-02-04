@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('adminlte/'); ?>dist/img/logo.png">
     <title><?= $judul ?></title>
 
     <!-- Google Font: Source Sans Pro -->

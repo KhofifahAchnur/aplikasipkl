@@ -41,8 +41,14 @@ class M_lokasi extends CI_model
     {
         $this->db->where('id', $id);
         $this->db->delete('lokasi');
-    
+   
+        
 }
+
+public function jumlah()
+    {
+        return $this->db->get('lokasi')->num_rows();
+    }
 
 // public function jumlah()
 //     {

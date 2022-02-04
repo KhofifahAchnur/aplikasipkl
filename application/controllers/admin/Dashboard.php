@@ -7,18 +7,19 @@ class Dashboard extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        if ($this->session->userdata('hak_akses') != '1') {
-            $this->session->set_flashdata('flash', '<div class="alert alert-danger" role="alert"> Anda Belum Login! <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span arial-hidden="true">&times;</span>
-					</button> </div>');
-            redirect('auth');
-        }
+        $this->load->model('M_masteraset');
+        $this->load->model('M_perpindahan');
+        $this->load->model('M_penanggung_jawab');
+        $this->load->model('M_lokasi');
     }
-    
+
     public function index()
     {
         $data['judul'] = 'Halaman Dashboard';
-        $data['user'] = $this->db->get_where('user', ['email' =>
-        $this->session->userdata('email')])->row_array();
+        $data['jumlah_aset'] = $this->M_masteraset->jumlah();
+        $data['jumlah_pindah'] = $this->M_perpindahan->jumlah();
+        $data['jumlah_penanggungjwb'] = $this->M_penanggung_jawab->jumlah();
+        $data['jumlah_lokasi'] = $this->M_lokasi->jumlah();
 
         $this->load->view('layout/header', $data);
         $this->load->view('layout/topbar');

@@ -89,7 +89,7 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-    <table width="50%" align="right" border="0" style="margin-top: 20px;">
+    <table width="20%" align="right" border="0" style="margin-top: 10px;">
         <tr>
         <tr>
             <td width="50%"></td>

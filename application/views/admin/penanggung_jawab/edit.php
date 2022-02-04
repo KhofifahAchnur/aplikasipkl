@@ -27,8 +27,8 @@
                             <h3 class="card-title">Edit Data Penanggung Jawab</h3>
                         </div>
                         <!-- form start -->
-                        <form action = "" method = "post">
-                        <input type="hidden" name="id" value="<?= $barang['id']; ?>">
+                        <form action="" method="post">
+                            <input type="hidden" name="id" value="<?= $barang['id']; ?>">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Nama</label>
@@ -42,12 +42,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Username</label>
-                                    <input type="text" class="form-control" id="username" placeholder="Masukkan Username" name="username">
+                                    <input type="text" class="form-control" id="username" placeholder="Masukkan Username" name="username" value="<?= $barang['username']; ?>">
                                     <div class="form-text text-danger"><?= form_error('username'); ?></div>
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input type="password" class="form-control" id="password" placeholder="Masukkan password" name="password">
+                                    <input type="password" class="form-control" id="password" placeholder="Masukkan password" name="password" value="<?= $barang['password']; ?>">
                                     <div class="form-text text-danger"><?= form_error('password'); ?></div>
                                 </div>
                                 <div class="form-group">

@@ -40,4 +40,9 @@ class M_perpindahan extends CI_model
     {
         return $this->db->get_where('history_perpindahan', ['id' => $id])->row_array();
     }
+
+    public function jumlah()
+    {
+        return $this->db->get('history_perpindahan')->num_rows();
+    }
 }

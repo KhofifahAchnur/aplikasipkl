@@ -53,5 +53,10 @@ class M_masteraset extends CI_model
         $this->db->where('id', $id);
         $this->db->update('aset', $data);
     }
+
+    public function jumlah()
+    {
+        return $this->db->get('aset')->num_rows();
+    }
 }
 

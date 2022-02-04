@@ -42,6 +42,11 @@ class M_penanggung_jawab extends CI_model
         $this->db->delete('penanggung_jawab');
     }
 
+    public function jumlah()
+    {
+        return $this->db->get('penanggung_jawab')->num_rows();
+    }
+
     // public function jumlah()
     // {
     //     return $this->db->get('Penanggung_jawab')->num_rows();

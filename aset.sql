@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2022 at 09:02 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Waktu pembuatan: 01 Feb 2022 pada 12.56
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `aset`
+-- Struktur dari tabel `aset`
 --
 
 CREATE TABLE `aset` (
@@ -44,24 +44,23 @@ CREATE TABLE `aset` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `aset`
+-- Dumping data untuk tabel `aset`
 --
 
 INSERT INTO `aset` (`id`, `perpindahan_id`, `nama_barang`, `kode_barang`, `register`, `merk`, `ukuran`, `bahan`, `tahun`, `kondisi`, `asal_usul`, `harga_brg`, `tanggal_masuk`) VALUES
-(3, 19, 'AC Split', '2.6.2.4.4', '1', 'Sharp/-', '-', 'Electronik', '2012', 'Baik', 'Pembelian', '3,950,000,00', '2022-01-27'),
-(4, 19, 'AC Unit', '2.6.2.4.3', '1', 'Sharp', '-', 'Plastik', '2008', 'Kurang Baik', 'Pembelian', '3,500,000,00', '2022-01-27'),
-(5, 18, 'AC ', '2.6.2.4.3', '2', 'Sharp', '-', 'Plastik', '2011', 'Baik', 'Pembelian', '3,500,000,00', '2022-01-27'),
-(6, 13, 'Printer', '2.6.3.4.8', '1', 'Canon', '-', 'Plastik', '2011', 'Baik', 'Pembelian', '500.000', '2022-01-27'),
-(7, 20, 'Microphone', '2.7.2.1.5', '1', 'Sharp', '-', 'Besi & Plastik', '2016', 'Baik', 'Hibah', '250.000', '2022-01-27'),
-(8, 13, 'Proyektor + Attachment', '2.7.1.1.3', '1', 'Tripot', '-', 'Besi Stainless', '2017', 'Rusak Berat', 'Pembelian', '550.000', '2022-01-27'),
-(9, 19, 'Lemari Kaca', '2.6.1.4.12', '1', 'Maspion', '-', 'Kaca', '2009', 'Baik', 'Pembelian', '950.000', '2022-01-27'),
-(10, 16, 'Bangku Sekolah', '2.6.2.4.6', '3', 'Lokal', '-', 'Kayu', '2011', 'Baik', 'Pembelian', '70.000', '2022-01-27'),
-(11, 19, 'Kipas Angin ', '2.6.2.4.6', '4', 'Sanyo', '-', 'Plastik', '2011', 'Baik', 'Pembelian', '400.000', '2022-01-27');
+(4, 16, 'AC Unit', '2.6.2.4.3', '1', 'Sharp', '-', 'Plastik', '2022', 'Baik', 'Pembelian', '3,500,000,00', '2022-01-27'),
+(5, 18, 'AC ', '2.6.2.4.3', '2', 'Sharp', '-', 'Plastik', '2022', 'Kurang Baik', 'Pembelian', '3,500,000,00', '2022-01-27'),
+(6, 13, 'Printer', '2.6.3.4.8', '1', 'Canon', '-', 'Plastik', '2022', 'Kurang Baik', 'Pembelian', '500.000', '2022-01-27'),
+(7, 13, 'Microphone', '2.7.2.1.5', '1', 'Sharp', '-', 'Besi & Plastik', '2022', 'Baik', 'Hibah', '250.000', '2022-01-27'),
+(8, 13, 'Proyektor + Attachment', '2.7.1.1.3', '1', 'Tripot', '-', 'Besi Stainless', '2022', 'Rusak Berat', 'Pembelian', '550.000', '2022-01-27'),
+(9, 19, 'Lemari Kaca', '2.6.1.4.12', '1', 'Maspion', '-', 'Kaca', '2022', 'Baik', 'Pembelian', '950.000', '2022-01-27'),
+(10, 16, 'Bangku Sekolah', '2.6.2.4.6', '3', 'Lokal', '-', 'Kayu', '2022', 'Kurang Baik', 'Pembelian', '70.000', '2022-01-27'),
+(13, 19, 'AC Split', '2.6.2.4.4', '1', 'Sharp', '-', 'Electronik', '2022', 'Baik', 'Hibah', '3,500,000,00', '2022-01-30');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hak_akses`
+-- Struktur dari tabel `hak_akses`
 --
 
 CREATE TABLE `hak_akses` (
@@ -71,7 +70,7 @@ CREATE TABLE `hak_akses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `hak_akses`
+-- Dumping data untuk tabel `hak_akses`
 --
 
 INSERT INTO `hak_akses` (`id`, `keterangan`, `hak_akses`) VALUES
@@ -81,7 +80,7 @@ INSERT INTO `hak_akses` (`id`, `keterangan`, `hak_akses`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `history_kondisi`
+-- Struktur dari tabel `history_kondisi`
 --
 
 CREATE TABLE `history_kondisi` (
@@ -92,17 +91,21 @@ CREATE TABLE `history_kondisi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `history_kondisi`
+-- Dumping data untuk tabel `history_kondisi`
 --
 
 INSERT INTO `history_kondisi` (`id`, `aset_id`, `tanggal`, `kondisi`) VALUES
-(41, 11, '2022-01-30', 'Kurang Baik'),
-(42, 11, '2022-01-30', 'Baik');
+(56, 4, '2022-01-28', 'Kurang Baik'),
+(57, 6, '2022-01-28', 'Kurang Baik'),
+(58, 7, '2022-01-28', 'Kurang Baik'),
+(59, 7, '2022-01-29', 'Baik'),
+(60, 4, '2022-01-30', 'Baik'),
+(61, 5, '2022-01-30', 'Kurang Baik');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `history_perpindahan`
+-- Struktur dari tabel `history_perpindahan`
 --
 
 CREATE TABLE `history_perpindahan` (
@@ -113,61 +116,25 @@ CREATE TABLE `history_perpindahan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `history_perpindahan`
+-- Dumping data untuk tabel `history_perpindahan`
 --
 
 INSERT INTO `history_perpindahan` (`id`, `aset_id`, `lokasi_id`, `tanggal`) VALUES
-(52, 29, 8, '2022-01-18'),
-(53, 29, 8, '2022-01-18'),
-(54, 29, 10, '2022-01-18'),
-(55, 29, 10, '2022-01-18'),
-(56, 29, 10, '2022-01-18'),
-(57, 29, 11, '2022-01-19'),
-(58, 29, 11, '2022-01-19'),
-(59, 29, 11, '2022-01-19'),
-(60, 29, 10, '2022-01-19'),
-(61, 29, 8, '2022-01-19'),
-(62, 29, 10, '2022-01-19'),
-(63, 29, 11, '2022-01-20'),
-(64, 26, 10, '2022-01-20'),
-(65, 29, 12, '2022-01-20'),
-(66, 26, 11, '2022-01-20'),
-(67, 26, 12, '2022-01-20'),
-(68, 29, 11, '2022-01-20'),
-(69, 0, 11, '2022-01-20'),
-(70, 0, 11, '2022-01-20'),
-(71, 0, 8, '2022-01-20'),
-(72, 34, 12, '2022-01-20'),
-(73, 33, 10, '2022-01-20'),
-(74, 34, 11, '2022-01-20'),
-(75, 34, 12, '2022-01-20'),
-(76, 33, 12, '2022-01-20'),
-(77, 35, 10, '2022-01-21'),
-(78, 36, 10, '2022-01-21'),
-(79, 36, 12, '2022-01-22'),
-(80, 33, 10, '2022-01-22'),
-(81, 41, 15, '2022-01-26'),
-(82, 42, 17, '2022-01-26'),
-(83, 43, 15, '2022-01-26'),
-(84, 1, 19, '2022-01-27'),
-(85, 3, 18, '2022-01-27'),
-(86, 4, 19, '2022-01-27'),
 (87, 5, 18, '2022-01-27'),
 (88, 6, 20, '2022-01-27'),
 (89, 7, 20, '2022-01-27'),
 (90, 8, 13, '2022-01-27'),
 (91, 9, 19, '2022-01-27'),
 (92, 10, 16, '2022-01-27'),
-(93, 11, 19, '2022-01-27'),
-(94, 11, 19, '2022-01-28'),
-(95, 3, 16, '2022-01-28'),
-(96, 3, 19, '2022-01-29'),
-(97, 6, 13, '2022-01-29');
+(97, 6, 13, '2022-01-29'),
+(98, 4, 16, '2022-01-30'),
+(99, 13, 19, '2022-01-30'),
+(100, 7, 13, '2022-01-30');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lokasi`
+-- Struktur dari tabel `lokasi`
 --
 
 CREATE TABLE `lokasi` (
@@ -177,16 +144,14 @@ CREATE TABLE `lokasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `lokasi`
+-- Dumping data untuk tabel `lokasi`
 --
 
 INSERT INTO `lokasi` (`id`, `lokasi`, `penanggung_jawab_id`) VALUES
-(8, 'Ruang Kepala ', 1),
-(11, 'Gudang', 3),
+(11, 'Gudang', 9),
 (13, 'Ruang OSIS', 4),
-(14, 'Ruang Lab IPA', 9),
+(14, 'Ruang Lab IPA', 8),
 (16, 'Ruang BK', 5),
-(17, 'Lab BAHASA', 10),
 (18, 'Ruang Lab Komputer', 6),
 (19, 'Ruang Lab Bahasa', 7),
 (20, 'Ruang Lab IPA', 8);
@@ -194,7 +159,7 @@ INSERT INTO `lokasi` (`id`, `lokasi`, `penanggung_jawab_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penanggung_jawab`
+-- Struktur dari tabel `penanggung_jawab`
 --
 
 CREATE TABLE `penanggung_jawab` (
@@ -207,21 +172,23 @@ CREATE TABLE `penanggung_jawab` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `penanggung_jawab`
+-- Dumping data untuk tabel `penanggung_jawab`
 --
 
 INSERT INTO `penanggung_jawab` (`id`, `nama`, `nip`, `username`, `password`, `hak_akses`) VALUES
-(3, 'Hj Netta Herawati', '-', 'Admin', '81dc9bdb52d04dc20036dbd8313ed055', 1),
 (4, 'Iwan Adi Pratama, S.Pd', '198002202009031000', 'IwanAPratama', '674f3c2c1a8a6f90461e8a66fb5550ba', 2),
-(5, 'Dra. Hj. Rasuna', '196605311995122000', 'Rasuna', '674f3c2c1a8a6f90461e8a66fb5550ba', 2),
 (6, 'Sudiatmoko, S.Pd', '197008271994031000', 'Sudiatmoko', '674f3c2c1a8a6f90461e8a66fb5550ba', 2),
 (7, 'Norhadiyah, S.Pd', '-', 'Norhadiyah', '674f3c2c1a8a6f90461e8a66fb5550ba', 2),
-(8, 'Hj. Risnawati', '196802151995122000', 'Risnawati', '674f3c2c1a8a6f90461e8a66fb5550ba', 2);
+(8, 'Hj. Risnawati', '196802151995122000', 'Risnawati', '674f3c2c1a8a6f90461e8a66fb5550ba', 2),
+(9, 'Dra. Hj. ST. RAHIMAH', '196202161986032000', 'Rahimah', '674f3c2c1a8a6f90461e8a66fb5550ba', 2),
+(11, 'member', '1', 'member', '674f3c2c1a8a6f90461e8a66fb5550ba', 2),
+(12, 'Dra. Hj. Rasuna', '196605311995122000', 'Rasuna', '674f3c2c1a8a6f90461e8a66fb5550ba', 2),
+(13, 'Hj Netta Herawati', '-', 'admin', '81dc9bdb52d04dc20036dbd8313ed055', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -236,7 +203,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
@@ -251,89 +218,89 @@ INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_a
 --
 
 --
--- Indexes for table `aset`
+-- Indeks untuk tabel `aset`
 --
 ALTER TABLE `aset`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `hak_akses`
+-- Indeks untuk tabel `hak_akses`
 --
 ALTER TABLE `hak_akses`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `history_kondisi`
+-- Indeks untuk tabel `history_kondisi`
 --
 ALTER TABLE `history_kondisi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `history_perpindahan`
+-- Indeks untuk tabel `history_perpindahan`
 --
 ALTER TABLE `history_perpindahan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `lokasi`
+-- Indeks untuk tabel `lokasi`
 --
 ALTER TABLE `lokasi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `penanggung_jawab`
+-- Indeks untuk tabel `penanggung_jawab`
 --
 ALTER TABLE `penanggung_jawab`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `aset`
+-- AUTO_INCREMENT untuk tabel `aset`
 --
 ALTER TABLE `aset`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `hak_akses`
+-- AUTO_INCREMENT untuk tabel `hak_akses`
 --
 ALTER TABLE `hak_akses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `history_kondisi`
+-- AUTO_INCREMENT untuk tabel `history_kondisi`
 --
 ALTER TABLE `history_kondisi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
--- AUTO_INCREMENT for table `history_perpindahan`
+-- AUTO_INCREMENT untuk tabel `history_perpindahan`
 --
 ALTER TABLE `history_perpindahan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
--- AUTO_INCREMENT for table `lokasi`
+-- AUTO_INCREMENT untuk tabel `lokasi`
 --
 ALTER TABLE `lokasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `penanggung_jawab`
+-- AUTO_INCREMENT untuk tabel `penanggung_jawab`
 --
 ALTER TABLE `penanggung_jawab`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;

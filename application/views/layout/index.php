@@ -27,13 +27,13 @@
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>150</h3>
-                            <h4><strong> Data Master Aset</strong></h4>
+                            <h3><?= $jumlah_aset ?></h3>
+                            <h4><strong> Data Aset</strong></h4>
                         </div>
                         <div class="icon">
                             <i class="far fa-folder-open"></i>
                         </div>
-                        <a href="<?= base_url('masteraset') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?= base_url('admin/aset') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -41,13 +41,13 @@
                     <!-- small box -->
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3>65</h3>
-                            <h4><strong>Data Aset Baru</strong></h4>
+                            <h3><?= $jumlah_pindah ?></h3>
+                            <h4><strong>Data Perpindahan Aset</strong></h4>
                         </div>
                         <div class="icon">
                             <i class="far fa-folder-open"></i>
                         </div>
-                        <a href="<?= base_url('aset') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?= base_url('admin/perpindahan') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -55,8 +55,8 @@
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>53</h3>
-                            <h4><strong>Data Penanggung jawab Aset</strong></h4>
+                            <h3><?= $jumlah_penanggungjwb ?></h3>
+                            <h4><strong>Data Penanggung Jawab</strong></h4>
                         </div>
                         <div class="icon">
                             <i class="far fa-folder-open"></i>
@@ -69,13 +69,13 @@
                     <!-- small box -->
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3>65</h3>
+                            <h3><?= $jumlah_lokasi ?></h3>
                             <h4><strong>Data Lokasi Aset</strong></h4>
                         </div>
                         <div class="icon">
                             <i class="far fa-folder-open"></i>
                         </div>
-                        <a href="<?= base_url('dataoutlet') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?= base_url('admin/lokasi') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -86,7 +86,7 @@
            <div class="row">
              <div class="d-flex no-block align-items-center">
                <div>
-                 <img src="<?= base_url('Adminlte/dist/img/11.JPG'); ?>" width="1590" />
+                 <img src="<?= base_url('Adminlte/dist/img/11.jpg'); ?>" width="1590" />
                </div>
              </div>
            </div>
